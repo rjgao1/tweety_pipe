@@ -46,7 +46,7 @@ def process_rdd(time, rdd):
         selected_tags_counts_df = sql_context_instance.sql("select tag, counts from tag_with_counts order by counts desc limit 8")
         print(selected_tags_counts_df)
         selected_tags_counts_df.show()
-       # stream_dataframe_to_flask(selected_tags_counts_df)
+        stream_dataframe_to_flask(selected_tags_counts_df)
     except:
         e = sys.exc_info()[0]
         print("Error: %s" % e)
