@@ -86,7 +86,7 @@ def main():
     ssc.stop(stopGracefully = True)
     constructPlot(plots)
     
-if __name__ == "__name__":
+if __name__ == "__main__":
     main()
 
 
