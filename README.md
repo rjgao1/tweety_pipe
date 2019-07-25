@@ -4,7 +4,8 @@ A real-time data processor built with Spark and Kafka. Data visualized with a si
 This project has two components. The first component is 
 
 ## twitter-spark
-This component streams live tweets and processes them in real-time. It visualizes the trending hashtags in the form of a bargraph. It aims to mimic the Twitter "trending" function.  
+This component gives a dynamic bargraph of the trending Twitter hastags, aiming to mimic the Twitter "trending" function.  
+This component streams live tweets, processes and visualizes them in real-time
 
 It is composed of a Twitter app, a real-time Spark processor and a Flask app.
 
@@ -55,3 +56,15 @@ python app.py
 Now open a browser and go to `0.0.0.0:5050`,  and you should be able to see a bargraph starts to move as time goes.  
 You can mostly tell what's been trending on Twitter after a few minutes!
 
+
+The second component of this project is
+
+## monitor 
+This component produces a line graph that represents the change of positive and negative words posted on Twitter over time.  
+It streams tweets and processes and calculates the number of positive and negative words in real-time.
+
+It is composed of a Kafka producer and a Spark processor.
+
+The Kafka producer uses tweepy to stream live tweets and produce tweets to Kafka topic "twitterStream". The Spark processor then consumes from that topic in real-time, calculates the numbers of positive and negative words. After termination, it produces a linegraph of the change of numbers of positive and negative words over time.  
+
+Some features of this component are not finished yet, so I don't want to put out a tutorial for how to use it just yet. 
