@@ -4,6 +4,9 @@ A real-time data processor built with Spark and Kafka. Data visualized with a si
 This project has two components. The first component is 
 
 ## twitter-spark
+
+![trending hashtags](wordcount_900.png?raw=true)
+
 This component gives a dynamic bargraph of the trending Twitter hastags, aiming to mimic the Twitter "trending" function.  
 This component streams live tweets, processes and visualizes them in real-time
 
@@ -60,6 +63,9 @@ You can mostly tell what's been trending on Twitter after a few minutes!
 The second component of this project is
 
 ## monitor 
+
+![sentiments](sentiments1.png?raw=true)
+
 This component produces a line graph that represents the change of positive and negative words posted on Twitter over time.  
 It streams tweets and processes and calculates the number of positive and negative words in real-time.
 
